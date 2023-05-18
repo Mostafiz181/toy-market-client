@@ -1,3 +1,47 @@
+#navbar{
+    width: 100%;
+    line-height: 50px;
+    background-color: #efdede8b;
+}
+
+#navbar .nav-item{
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.748);
+    padding: 0 25px;
+
+
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid rgb(54, 221, 202) ;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transition: .4s;
+}
+
+
+
+#navbar .nav-logo{
+    display: flex;
+}
+
+#navbar .nav-logo h3{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+#navbar .nav-logo .name{
+    color: rgb(54, 221, 202);
+    font-weight: bold;
+}
+
+#navbar .nav-logo .toy{
+    color: green;
+    font-weight: bold;
+}
+
+
 .navbar .logo{
     width: 80px;
     height: 50px;
