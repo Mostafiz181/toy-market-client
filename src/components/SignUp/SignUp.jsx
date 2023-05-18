@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './SignUp.css'
 import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import signUp from '../../assets/login.jpg'
 import Swal from 'sweetalert2'
+import { AuthContext } from '../providers/AuthProvider';
 
 const SignUp = () => {
 
     const [error, setError]= useState('')
+
+    const {createUser}= useContext(AuthContext)
 
 
     const handleSignUp= event=>{
@@ -19,6 +22,9 @@ const SignUp = () => {
         const photo= form.photo.value;
         console.log(name,email,password,photo)
 
+
+        
+        setError(' ')
         if(password.length < 6){
             Swal.fire(
                 'error',
@@ -33,6 +39,16 @@ const SignUp = () => {
                 'success'
               )
         }
+
+        createUser(email,password)
+        .then(result=>{
+            const loggedUser=result.user;
+            console.log(loggedUser)
+        })
+        .catch(error=>{
+            console.log(error);
+            setError(error.message);
+        })
     }
     return (
         <div id='signUp-part'>

@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Header = () => {
+
+  const {user,logOut}= useContext(AuthContext);
+  console.log(user);
+  const handleLogout = ()=>{
+    logOut()
+    .then(result=>{})
+    .catch(error=>console.log(error))
+  }
+
+
   return (
     <div id="navbar">
       <Navbar className="navbar" collapseOnSelect expand="lg" bg="" variant="">
@@ -34,6 +45,11 @@ const Header = () => {
               </li>
             </Nav>
           </Navbar.Collapse>
+
+          <Link to='/login'><button>Login</button></Link>
+          {
+          user && <span>Welcome{user.email} <button onClick={handleLogout} >Logout</button> </span >  
+          }
         </Container>
       </Navbar>
     </div>
