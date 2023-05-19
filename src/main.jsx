@@ -13,6 +13,7 @@ import Blog from './components/Blog/Blog.jsx';
 import Login from './components/Login/Login.jsx';
 import SignUp from './components/SignUp/SignUP.jsx';
 import AuthProvider from './components/providers/AuthProvider.jsx';
+import NotFound from './components/NotFound/NotFound.jsx';
 
 
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path:'/signUp',
         element:<SignUp></SignUp>,
 
+      },
+      {
+        path:"*",
+        element:<NotFound></NotFound>
       }
     ]
   },
