@@ -52,3 +52,37 @@
     font-size: 15px;
     color: #fff;
 }
+
+.navbar .btn-login{
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.748);
+    padding: 0 25px;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid salmon ;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.navbar .btn-logout{
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.748);
+    padding: 0 25px;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid salmon ;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+}
+
+.text-white{
+    color: #ffff;
+}
+.photo-url{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

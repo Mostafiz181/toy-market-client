@@ -1,14 +1,35 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css'
 import login from '../../assets/login.jpg'
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../providers/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../firebase/firebase.config';
 
 
 const Login = () => {
 
+    const [error, setError]= useState('')
+
+    ////
+    const auth=getAuth(app)
+    const provider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn=()=>{
+        signInWithPopup(auth,provider)
+        .then(result=>{
+          const user =result.user;
+          console.log(user)
+        })
+        .catch(error=>{
+          console.log("error", error.message)
+        })
+      }
+
+  ////
     const {signIn}=useContext(AuthContext)
 
     const handleLogin = event=>{
@@ -19,6 +40,25 @@ const Login = () => {
         const password =form.password.value;
         console.log(name,email,password);
 
+
+        ////
+
+        setError(' ')
+        if(password.length < 6){
+            Swal.fire(
+                'error',
+                'Password must be at least six characters',
+                'error'
+            )
+        }
+        else{
+            Swal.fire(
+                'success',
+                'login successfully',
+                'success'
+              )
+        }
+        ////
 
         signIn(email,password)
         .then(result=>{
@@ -47,7 +87,7 @@ const Login = () => {
                                 </form>
 
                                 <p>New to Shayaan's Toy ? <Link to='/signUp'>SignUp</Link></p>
-                                <button type="button" class="btn-google"> <FcGoogle className='icon'></FcGoogle> Login with Google</button>
+                                <button type="button" onClick={handleGoogleSignIn} className="btn-google"> <FcGoogle className='icon'></FcGoogle> Login with Google</button>
                         </div>
 
                     </div>

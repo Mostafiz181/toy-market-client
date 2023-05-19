@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Header.css";
-import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
@@ -46,9 +46,10 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
 
-          <Link to='/login'><button>Login</button></Link>
+         
           {
-          user && <span>Welcome{user.email} <button onClick={handleLogout} >Logout</button> </span >  
+            user ? <><span className="text-white"> <img title={user.displayName} className="photo-url" src={user.photoURL} alt="" /> <button className="btn-logout" onClick={handleLogout} >Logout</button> </span >   </>: <Link to='/login'><button className="btn-login">Login</button></Link>
+              
           }
         </Container>
       </Navbar>

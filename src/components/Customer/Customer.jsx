@@ -17,7 +17,7 @@ const Customer = () => {
 
         <div className="customer-item">
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-lg-4 ">
               <div className="box">
                 <img src={c1} alt="" />
                 <div className="overlay">
@@ -29,7 +29,7 @@ const Customer = () => {
                 
               </div>
               <div className="semi-box">
-                <h1>Jigsaw puzzle</h1>
+                <h1>Yellow Prado</h1>
                 <p>It makes your child be happy</p>
                
               </div>
@@ -48,7 +48,7 @@ const Customer = () => {
                 
               </div>
               <div className="semi-box">
-                <h1>Rocking Horse</h1>
+                <h1>Rocking Prado</h1>
                 <p>It makes your child be happy</p>
                
               </div>
@@ -65,7 +65,7 @@ const Customer = () => {
                 
               </div>
               <div className="semi-box">
-                <h1>Puppet Show</h1>
+                <h1>Sports Prado</h1>
                 <p>It makes your child be happy</p>
                
               </div>
@@ -82,7 +82,7 @@ const Customer = () => {
                 
               </div>
               <div className="semi-box">
-                <h1>Baby Car</h1>
+                <h1>Red Prado</h1>
                 <p>It makes your child be happy</p>
                
               </div>
@@ -99,7 +99,7 @@ const Customer = () => {
                 
               </div>
               <div className="semi-box">
-                <h1>Taddy</h1>
+                <h1>Red Prado pro</h1>
                 <p>It makes your child be happy</p>
                
               </div>
@@ -116,7 +116,7 @@ const Customer = () => {
                 
               </div>
               <div className="semi-box">
-                <h1>Teddy Bear</h1>
+                <h1>Sky Prado</h1>
                 <p>It makes your child be happy</p>
                
               </div>

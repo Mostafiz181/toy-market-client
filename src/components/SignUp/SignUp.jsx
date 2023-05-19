@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 import './SignUp.css'
 import { Link } from 'react-router-dom';
-import { FcGoogle } from 'react-icons/fc';
 import signUp from '../../assets/login.jpg'
 import Swal from 'sweetalert2'
 import { AuthContext } from '../providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const SignUp = () => {
 
@@ -19,8 +19,8 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password= form.password.value;
-        const photo= form.photo.value;
-        console.log(name,email,password,photo)
+        const photoUrl= form.photoUrl.value;
+        console.log(name,email,password,photoUrl)
 
 
         
@@ -44,12 +44,27 @@ const SignUp = () => {
         .then(result=>{
             const loggedUser=result.user;
             console.log(loggedUser)
+
+            ////
+            handleUpdate(loggedUser,password,photoUrl)
+            ////
         })
         .catch(error=>{
             console.log(error);
             setError(error.message);
         })
     }
+
+
+    const handleUpdate = (createUser, name, photoUrl) => {
+        updateProfile(createUser, { displayName: name, photoURL: photoUrl })
+          .then(() => {})
+          .catch((error) => console.error(error));
+      };
+
+
+
+
     return (
         <div id='signUp-part'>
         <div className='container'>
@@ -62,12 +77,11 @@ const SignUp = () => {
                                 <input type="text" name="name" id="name" placeholder='Name' required/> <br />
                                 <input type="email" name="email" id="email" placeholder='Email' required/> <br />
                                 <input type="password" name="password" id="password" placeholder='password'  required/> <br />
-                                <input type="text" name="photo" id="photo" placeholder='photo Url' required /> <br />
+                                <input type="text" name="photoUrl" id="photoUrl" placeholder='photo Url' required /> <br />
                                 <input type="submit" value="Sign Up"  className='btn btn-secondary'/>
                             </form>
 
                             <p>Already have an account ? <Link to='/login'>Login</Link></p>
-                            <button type="button" class="btn-google"> <FcGoogle className='icon'></FcGoogle> SignUp with Google</button>
                     </div>
 
                 </div>
