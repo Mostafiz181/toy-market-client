@@ -1,0 +1,78 @@
+#gallery-part{
+    width: 100%;
+    padding: 50px 10px;
+    
+}
+
+#gallery-part .gallery-text{
+    text-align: center;
+}
+
+#gallery-part .gallery-text h1{
+    font-family: 'Mochiy Pop One', sans-serif; 
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.748);
+}
+
+
+#gallery-part .gallery-text p{
+    font-family: 'Mochiy Pop One', sans-serif; 
+    font-size: 15px;
+    font-weight: regular;
+    color: rgba(0, 0, 0, 0.748);
+    margin: 20px 0;
+
+}
+
+#gallery-part .gallery-item .box{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+
+#gallery-part .gallery-item .box .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.229);
+    overflow: hidden;
+    opacity: 0;
+    transition: .4s;
+    border-radius: 5px;
+}
+
+#gallery-part .gallery-item .box:hover .overlay{
+    opacity: 1;
+    width: 100%;
+}
+
+#gallery-part .gallery-item .box .overlay .icon{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -200px;
+    font-size: 70px;
+    transition: .8s;
+    
+  
+}
+
+#gallery-part .gallery-item .box:hover .overlay .icon{
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+#gallery-part .gallery-item .box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}

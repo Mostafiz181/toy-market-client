@@ -1,6 +1,6 @@
 #customer-part{
     width: 100%;
-    padding: 50px 10px;
+    padding: 50px 0px;
     
 }
 
@@ -19,7 +19,7 @@
 #customer-part .customer-text p{
     font-family: 'Mochiy Pop One', sans-serif; 
     font-size: 15px;
-    font-weight: bold;
+    font-weight: regular;
     color: rgba(0, 0, 0, 0.748);
     margin: 20px 0;
 }

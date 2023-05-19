@@ -43,6 +43,12 @@ const Header = () => {
                   Blogs
                 </Link>
               </li>
+
+              <li>
+                <Link className="nav-item" to="">
+                  All Toy
+                </Link>
+              </li>
             </Nav>
           </Navbar.Collapse>
 
