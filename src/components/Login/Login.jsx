@@ -13,11 +13,6 @@ import app from '../../firebase/firebase.config';
 const Login = () => {
 
 
-    // const navigate = useNavigate();
-    // const location =useLocation();
-    // console.log(location);
-  
-    // const from = location.state?.from?.pathname || '/';
 
     const [error, setError]= useState('')
 
@@ -70,14 +65,14 @@ const Login = () => {
                 'success',
                 'login successfully',
                 'success'
-              )
+            )
         }
         ////
 
         signIn(email,password)
         .then(result=>{
             const loggedUser= result.user;
-            console.log(loggedUser);
+            // console.log(loggedUser);
             form.reset();
             navigate(from, {replace: true})
         })

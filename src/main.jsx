@@ -17,6 +17,7 @@ import NotFound from './components/NotFound/NotFound.jsx';
 import AllToy from './components/AllToy/AllToy.jsx';
 import PrivateRoute from './components/Routs/PrivateRoute.jsx';
 import AddToy from './components/AddToy/AddToy.jsx';
+import MyToy from './components/MyToy/MyToy.jsx';
 
 
 
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
       {
         path:"/AddToy",
         element:<AddToy></AddToy>
+
+      },
+      {
+        path:'/mytoy',
+        element:<PrivateRoute><MyToy></MyToy></PrivateRoute>,
 
       },
       {

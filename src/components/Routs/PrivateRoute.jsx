@@ -7,7 +7,7 @@ const PrivateRoute = ({children}) => {
     const {user,loading}= useContext(AuthContext);
     const location=useLocation();
 
-    console.log(location)
+    // console.log(location)
 
     if(loading){
         return <div className="spinner-border text-dark spinner" role="status">
@@ -15,8 +15,8 @@ const PrivateRoute = ({children}) => {
       </div>
     }
 
-    if(user){
-        return children
+    if(user?.email){
+        return children;
     }
 
     return <Navigate to="/login" state={{from :location}} replace></Navigate>

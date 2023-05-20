@@ -8,7 +8,7 @@ import { AuthContext } from "../providers/AuthProvider";
 const Header = () => {
 
   const {user,logOut}= useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   const handleLogout = ()=>{
     logOut()
     .then(result=>{})
@@ -51,16 +51,23 @@ const Header = () => {
               </li>
 
               <li>
-                <Link className="nav-item" to="AddToy">
-                  Add Toy
-                </Link>
+                  <Link className="nav-item" to="AddToy">Add Toy</Link> 
               </li>
+
+              
+                
+                  
+                
+             
             </Nav>
           </Navbar.Collapse>
 
          
           {
-            user ? <><span className="text-white"> <img title={user.displayName} className="photo-url" src={user.photoURL} alt="" /> <button className="btn-logout" onClick={handleLogout} >Logout</button> </span >   </>: <Link to='/login'><button className="btn-login">Login</button></Link>
+            user ? <>
+              <Link className="nav-item" to="mytoy">My Toy</Link> 
+            
+            <span className="text-white"> <img title={user.displayName} className="photo-url" src={user.photoURL} alt="" /> <button className="btn-logout" onClick={handleLogout} >Logout</button> </span >   </>: <Link to='/login'><button className="btn-login">Login</button></Link>
               
           }
         </Container>
