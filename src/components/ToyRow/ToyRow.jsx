@@ -3,8 +3,7 @@ import "./ToyRow.css";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
-
-const ToyRow = ({ toy,del,setDel}) => {
+const ToyRow = ({ toy, toys, setToys }) => {
   const {
     _id,
     photo,
@@ -30,23 +29,17 @@ const ToyRow = ({ toy,del,setDel}) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${_id}`,{
-          method:'DELETE'
-
+        fetch(`http://localhost:5000/toys/${_id}`, {
+          method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
-              Swal.fire(
-                'Deleted!',
-                'Your toy has been deleted.',
-                'success'
-              )
+              Swal.fire("Deleted!", "Your toy has been deleted.", "success");
 
-              const remaining=toy.filter(d=>d._id!== _id);
-              setDel(remaining)
-
+              const remaining=toys.filter(c=>c._id !== _id)
+              setToys(remaining);
             }
           });
       }

@@ -1,7 +1,7 @@
 #myToy-part{
     width: 100%;
     padding: 50px 10px;
-    background-color: coral;
+    background-color: #efdeded9 !important;
 }
 
 #myToy-part .table th{

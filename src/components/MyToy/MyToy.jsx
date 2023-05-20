@@ -9,7 +9,9 @@ const MyToy = () => {
     const loadedToys=useLoaderData
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
-  const [del,setDel]=useState(loadedToys)
+//   const [del,setDel]=useState(loadedToys)
+
+//    const [cars,setCars]=useState(loadedToys)
 
   const url = `http://localhost:5000/toys?email=${user?.email}`;
 
@@ -25,7 +27,6 @@ const MyToy = () => {
       <div className="row">
         <div className="col-lg-12">
           <div className="container">
-            <h1>this is my toy page:{toys.length}</h1>
 
             <table className="table">
               <thead>
@@ -44,10 +45,11 @@ const MyToy = () => {
               <tbody>
                 {toys.map((toy) => (
                   <ToyRow 
-                  key={toy._id}
-                   toy={toy}
-                   del={del}
-                   setDel={setDel}
+                     key={toy._id}
+                     toy={toy}
+                    toys={toys}
+                    setToys={setToys}
+                  
                    ></ToyRow>
                 ))}
               </tbody>

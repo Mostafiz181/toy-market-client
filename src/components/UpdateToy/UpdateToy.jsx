@@ -51,7 +51,7 @@ const UpdateToy = () => {
         .then(data=>{
           console.log(data)
     
-          if(data.insertedId){
+          if(data.modifiedCount>0){
             Swal.fire(
               'success',
               'Toy update successfully',
