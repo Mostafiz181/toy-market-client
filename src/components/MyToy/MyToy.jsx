@@ -2,10 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import "./MyToy.css";
 import { AuthContext } from "../providers/AuthProvider";
 import ToyRow from "../ToyRow/ToyRow";
+import { useLoaderData } from "react-router-dom";
 
 const MyToy = () => {
+
+    const loadedToys=useLoaderData
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
+  const [del,setDel]=useState(loadedToys)
 
   const url = `http://localhost:5000/toys?email=${user?.email}`;
 
@@ -39,7 +43,12 @@ const MyToy = () => {
               </thead>
               <tbody>
                 {toys.map((toy) => (
-                  <ToyRow key={toy._id} toy={toy}></ToyRow>
+                  <ToyRow 
+                  key={toy._id}
+                   toy={toy}
+                   del={del}
+                   setDel={setDel}
+                   ></ToyRow>
                 ))}
               </tbody>
             </table>

@@ -1,9 +1,10 @@
 import React from "react";
 import "./ToyRow.css";
 import Swal from "sweetalert2";
-import { FaCreativeCommonsNcJp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const ToyRow = ({ toy }) => {
+
+const ToyRow = ({ toy,del,setDel}) => {
   const {
     _id,
     photo,
@@ -42,6 +43,10 @@ const ToyRow = ({ toy }) => {
                 'Your toy has been deleted.',
                 'success'
               )
+
+              const remaining=toy.filter(d=>d._id!== _id);
+              setDel(remaining)
+
             }
           });
       }
@@ -63,7 +68,9 @@ const ToyRow = ({ toy }) => {
       <td>{price}</td>
       <td>{quantity}</td>
       <td>
-        <button className="update">update</button>
+        <Link to={`/updateToy/${_id}`}>
+          <button className="update">update</button>
+        </Link>
       </td>
       <td>
         <button onClick={() => handleDelete(_id)} className="delete">
