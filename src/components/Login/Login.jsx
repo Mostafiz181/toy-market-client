@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './Login.css'
 import login from '../../assets/login.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 import { FcGoogle } from "react-icons/fc";
@@ -12,7 +12,21 @@ import app from '../../firebase/firebase.config';
 
 const Login = () => {
 
+
+    // const navigate = useNavigate();
+    // const location =useLocation();
+    // console.log(location);
+  
+    // const from = location.state?.from?.pathname || '/';
+
     const [error, setError]= useState('')
+
+    const navigate = useNavigate();
+    const location = useLocation()
+    console.log(location);
+
+
+    const from=location.state?.from?.pathname || '/';
 
     ////
     const auth=getAuth(app)
@@ -65,6 +79,7 @@ const Login = () => {
             const loggedUser= result.user;
             console.log(loggedUser);
             form.reset();
+            navigate(from, {replace: true})
         })
         .catch(error=>{
             console.log(error);

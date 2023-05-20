@@ -45,8 +45,14 @@ const Header = () => {
               </li>
 
               <li>
-                <Link className="nav-item" to="">
+                <Link className="nav-item" to="allToy">
                   All Toy
+                </Link>
+              </li>
+
+              <li>
+                <Link className="nav-item" to="AddToy">
+                  Add Toy
                 </Link>
               </li>
             </Nav>

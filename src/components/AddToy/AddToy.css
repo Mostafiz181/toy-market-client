@@ -1,0 +1,18 @@
+#AddToy-part{
+    width: 100%;
+    padding: 50px 0;
+    background-color: coral;
+}
+
+#AddToy-part .toy-item input{
+    width: 48%;
+    margin-left: 2%;
+    margin-bottom: 10px;
+    border: 0;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+#AddToy-part .toy-item .btn-toy{
+    width: 98%;
+}

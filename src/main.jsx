@@ -14,6 +14,9 @@ import Login from './components/Login/Login.jsx';
 import SignUp from './components/SignUp/SignUP.jsx';
 import AuthProvider from './components/providers/AuthProvider.jsx';
 import NotFound from './components/NotFound/NotFound.jsx';
+import AllToy from './components/AllToy/AllToy.jsx';
+import PrivateRoute from './components/Routs/PrivateRoute.jsx';
+import AddToy from './components/AddToy/AddToy.jsx';
 
 
 
@@ -39,6 +42,16 @@ const router = createBrowserRouter([
       {
         path:'/signUp',
         element:<SignUp></SignUp>,
+
+      },
+      {
+        path:'/allToy',
+        element:<AllToy></AllToy>,
+
+      },
+      {
+        path:"/AddToy",
+        element:<AddToy></AddToy>
 
       },
       {
