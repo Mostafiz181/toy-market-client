@@ -27,6 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<NotFound></NotFound>,
     children:[
       {
         path:'/',
@@ -50,6 +51,7 @@ const router = createBrowserRouter([
       {
         path:'/allToy',
         element:<AllToy></AllToy>,
+        
 
       },
       {
@@ -68,10 +70,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute><MyToy></MyToy></PrivateRoute>,
 
       },
-      {
-        path:"*",
-        element:<NotFound></NotFound>
-      }
+
     ]
   },
 ]);
