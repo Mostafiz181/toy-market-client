@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Customer.css";
 import c1 from '../../assets/c1.jpg'
 import c2 from '../../assets/c2.jpg'
@@ -8,10 +8,17 @@ import c5 from '../../assets/c5.jpg'
 import c6 from '../../assets/c6.jpg'
 import { FaAmbulance } from "react-icons/fa";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Customer = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <div id="customer-part">
-      <div className="customer-text container">
+      <div data-aos="fade-up" className="customer-text container">
         <h1>Customer Loves</h1>
         <p>POPULAR PRODUCTS</p>
 

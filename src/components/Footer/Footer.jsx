@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Footer.css";
 import logo from "../../assets/logo.png";
 import { FaLocationArrow } from "react-icons/fa";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Footer = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
-    <div id="footer-part">
+    <div data-aos="fade-right" id="footer-part">
       <div className="container">
         <div className="row">
           <div className="col-lg-4">

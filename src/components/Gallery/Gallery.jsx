@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Gallery.css";
 import gal1 from "../../assets/gal1.jpg";
 import gal2 from "../../assets/gal2.jpg";
@@ -11,7 +11,22 @@ import gal8 from "../../assets/gal8.jpg";
 import gal9 from "../../assets/gal9.jpg";
 import { FcInTransit } from "react-icons/fc";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
+
 const Gallery = () => {
+
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+
+
+
   return (
     <div id="gallery-part" className="container">
       <div className="gallery-text">
@@ -22,9 +37,9 @@ const Gallery = () => {
         </p>
       </div>
 
-      <div className="gallery-item">
+      <div data-aos="fade-right"  className="gallery-item">
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-4  " >
             <div className="box">
               <img src={gal1} alt="" />
               <div className="overlay">

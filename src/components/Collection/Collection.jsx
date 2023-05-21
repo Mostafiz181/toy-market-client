@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Collection.css'
 import cal1 from '../../assets/collection1.jpg'
 import cal2 from '../../assets/collection2.jpg'
@@ -8,14 +8,23 @@ import cal5 from '../../assets/collection5.jpg'
 import cal6 from '../../assets/collection6.jpg'
 import {FaBuffer } from 'react-icons/fa';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Collection = () => {
+
+    
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
     return (
         <div id='collection-part' className='container'>
             <h2>Our Collections</h2>
             <p>Small beautiful toys collection is waiting for you in our catalog</p>
 
 
-            <div className='collection-item'>
+            <div data-aos="fade-left"  className='collection-item'>
                 <div className="row">
                     <div className="col-lg-4">
                         <div className="box ">

@@ -22,6 +22,8 @@ const AllToy = () => {
       <div className="container">
 
         <h1>All Toys</h1>
+
+        <div className="search"><input type="text" name="name" id=""  placeholder="Search Toy...."/></div>
       <table className="table">
         <thead>
           <tr>

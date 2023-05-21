@@ -23,8 +23,6 @@ const UpdateToy = () => {
     const handleToUpdate=event=>{
         event.preventDefault();
         const form =event.target;
-        const name= form.name.value;
-        const seller=form.seller.value;
         const price =form.price.value;
         const quantity=form.quantity.value;
         const description= form.description.value;
@@ -80,22 +78,22 @@ const UpdateToy = () => {
             <div className="row toy-item">
               <div className="col-lg-12">
                 <form onSubmit={handleToUpdate}>
-                   <input 
+                   {/* <input 
                    type="text" 
                    name="name" 
                    id="name" 
                    defaultValue={carName}
                    placeholder="Name" 
-                   />  
+                   />   */}
 
 
-                  <input
+                  {/* <input
                     type="text"
                     name="seller"
                     id="seller"
                     defaultValue={seller}
                     placeholder="Seller Name"
-                  />
+                  /> */}
        
 
 

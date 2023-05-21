@@ -2,9 +2,14 @@ import React from "react";
 import banner from "../../assets/banner.jpg";
 import "./Banner.css";
 
+
+
 const Banner = () => {
+
+
+
   return (
-    <div id="banner-part">
+    <div  id="banner-part">
       <img src={banner} alt="" />
 
       <div className="overlay">

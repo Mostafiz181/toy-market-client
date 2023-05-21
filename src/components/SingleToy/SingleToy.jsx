@@ -7,7 +7,7 @@ const SingleToy = () => {
     const data = useLoaderData([])
     console.log(data)
 
-    const {photo,carName,description,price,rating,quantity}=data;
+    const {photo,carName,seller,email,description,price,rating,quantity}=data;
     return (
         <div id='single-Toy'>
            <div className='container'>
@@ -21,7 +21,10 @@ const SingleToy = () => {
                    
                     <div class="card-body">
                         <h5 class="card-title">  {carName}</h5>
+                        <p>Seller:{seller}</p>
+                        <p>Email: {email}</p>
                         <p> Price: $ {price}</p>
+                       
                         <p> Rating: {rating} stars</p>
                         <p> Quantity: {quantity} pice</p>
                         <p>Description: {description}</p>
