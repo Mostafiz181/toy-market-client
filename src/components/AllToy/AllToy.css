@@ -1,13 +1,17 @@
 #allToy-part{
     width: 100%;
     padding: 50px 10px;
-    background-color: #ffff;
+    background-color: #efdeded9 !important;
 }
 
 #allToy-part .table th{
    
     font-family: 'Mochiy Pop One', sans-serif;
     font-weight: regular;
+}
+
+tr{
+    margin-bottom: 20px;
 }
 
 #allToy-part h1{

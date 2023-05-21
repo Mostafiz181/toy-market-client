@@ -18,6 +18,7 @@ const AddToy = () => {
     const rating= form.rating.value;
     const quantity=form.quantity.value;
     const photo=form.photo.value;
+    const description= form.description.value;
     const info={
       carName:name,
       seller,
@@ -26,7 +27,8 @@ const AddToy = () => {
       price,
       rating,
       quantity,
-      photo
+      photo,
+      description
     }
 
     console.log(info)
@@ -65,7 +67,7 @@ const AddToy = () => {
           <div className="row toy-item">
             <div className="col-lg-12">
               <form onSubmit={handleToAdd}>
-                 <input type="text" name="name" id="name" placeholder="Name" />  
+                 <input type="text" name="name" id="name" placeholder="Car Name" />  
                 <input
                   type="text"
                   name="seller"
@@ -112,6 +114,12 @@ const AddToy = () => {
                   placeholder="Photo-Url"
                 />
                 <br />
+                <input
+                  type="text"
+                  name="description"
+                  id="des"
+                  placeholder="Description"
+                />
 
                 <input className="btn-toy" type="submit" value="Add Toy" />
               </form>

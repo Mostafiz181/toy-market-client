@@ -25,7 +25,6 @@ const AllToy = () => {
       <table className="table">
         <thead>
           <tr>
-          <th scope="col">Photo</th>
             <th scope="col">Seller</th>
             <th scope="col">Toy Name</th>
             <th scope="col">Sub-Category</th>

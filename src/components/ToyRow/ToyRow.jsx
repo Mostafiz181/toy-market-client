@@ -14,6 +14,7 @@ const ToyRow = ({ toy, toys, setToys }) => {
     price,
     rating,
     quantity,
+    description
   } = toy;
   // delete start from here
   const handleDelete = (_id) => {
@@ -59,6 +60,7 @@ const ToyRow = ({ toy, toys, setToys }) => {
       <td>{email}</td>
       <td>{category}</td>
       <td>{price}</td>
+      <td>{description}</td>
       <td>{quantity}</td>
       <td>
         <Link to={`/updateToy/${_id}`}>

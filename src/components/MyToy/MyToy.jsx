@@ -28,6 +28,8 @@ const MyToy = () => {
         <div className="col-lg-12">
           <div className="container">
 
+            <h1>My Toys</h1>
+
             <table className="table">
               <thead>
                 <tr>
@@ -37,6 +39,8 @@ const MyToy = () => {
                   <th scope="col">Email</th>
                   <th scope="col">Category</th>
                   <th scope="col">Price</th>
+                  
+                  <th scope="col">Description</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Update</th>
                   <th scope="col">Delete</th>

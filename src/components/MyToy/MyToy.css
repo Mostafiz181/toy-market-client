@@ -10,6 +10,15 @@
     
 }
 
+#myToy-part  h1{
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-weight: regular;
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.748);
+    padding-bottom: 20px;
+}
+
 
 .table>:not(caption)>*>* {
     padding: 0.5rem 0.5rem;

@@ -16,6 +16,7 @@ const UpdateToy = () => {
         price,
         rating,
         quantity,
+        description,
     } = toy;
 
 
@@ -26,6 +27,7 @@ const UpdateToy = () => {
         const seller=form.seller.value;
         const price =form.price.value;
         const quantity=form.quantity.value;
+        const description= form.description.value;
         const updateToy={
           carName:name,
           seller,
@@ -34,7 +36,8 @@ const UpdateToy = () => {
           price,
           rating,
           quantity,
-          photo
+          photo,
+          description
         }
     
         console.log(updateToy)
@@ -113,6 +116,14 @@ const UpdateToy = () => {
                   />
 
                   <br />
+
+                  <input
+                    type="text"
+                    name="description"
+                    id="description"
+                    defaultValue={description}
+                    placeholder="Description"
+                  />
   
                   <input className="btn-toy" type="submit" value="Update Toy" />
                 </form>
