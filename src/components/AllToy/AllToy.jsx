@@ -6,15 +6,28 @@ import ShowAllToys from "../ShowAllToys/ShowAllToys";
 const AllToy = () => {
 
   const [allToy,setAllToy]= useState([])
+
+  const [carSearch,setCarSearch]= useState(' ')
   console.log(allToy)
 
   useEffect(()=>{
-    fetch('http://localhost:5000/toys')
+    fetch('https://simple-toy-server.vercel.app/toys')
     .then(res=>res.json())
     .then(data=>{
       setAllToy(data)
     })
   },[])
+
+
+  const handleCarSearch = () => {
+    fetch(`https://simple-toy-server.vercel.app/carSearchByName/${carSearch}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAllToy(data);
+      });
+  };
+
+
 
 
   return (
@@ -23,7 +36,7 @@ const AllToy = () => {
 
         <h1>All Toys</h1>
 
-        <div className="search"><input type="text" name="name" id=""  placeholder="Search Toy...."/></div>
+        <div className="search"><input onChange={(e)=> setCarSearch(e.target.value)} type="text" name="name" id=""  placeholder="Search Toy...."/> <button className="btn-search" onClick={handleCarSearch}>search</button> </div> 
       <table className="table">
         <thead>
           <tr>

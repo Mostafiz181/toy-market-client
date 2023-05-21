@@ -20,6 +20,7 @@ import AddToy from './components/AddToy/AddToy.jsx';
 import MyToy from './components/MyToy/MyToy.jsx';
 import UpdateToy from './components/UpdateToy/UpdateToy.jsx';
 import SingleToy from './components/SingleToy/SingleToy.jsx';
+import Shop from './components/Shop/Shop.jsx';
 
 
 
@@ -57,13 +58,13 @@ const router = createBrowserRouter([
       },
       {
         path:"/AddToy",
-        element:<AddToy></AddToy>
+        element:<PrivateRoute><AddToy></AddToy></PrivateRoute>,
 
       },
       {
         path:'updateToy/:id',
         element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
-        loader:({params})=> fetch(`http://localhost:5000/toys/${params.id}`)
+        loader:({params})=> fetch(`https://simple-toy-server.vercel.app/toys/${params.id}`)
       }
       ,
       {
@@ -74,7 +75,11 @@ const router = createBrowserRouter([
       {
         path:'/singleToy/:id',
         element:<PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+        loader:({params})=>fetch(`https://simple-toy-server.vercel.app/toys/${params.id}`)
+      },
+      {
+        path:'/shop',
+        element:<Shop></Shop>
       }
 
     ]

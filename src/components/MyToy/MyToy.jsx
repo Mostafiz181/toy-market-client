@@ -13,7 +13,7 @@ const MyToy = () => {
 
 //    const [cars,setCars]=useState(loadedToys)
 
-  const url = `http://localhost:5000/toys?email=${user?.email}`;
+  const url = `https://simple-toy-server.vercel.app/toys?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)

@@ -37,3 +37,15 @@
    font-size: 15px;
    color: rgba(0, 0, 0, 0.748);
 }
+
+.btn-search{
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.748);
+    border: 0;
+    background-color: #fff;
+    border-radius: 8px;
+
+}

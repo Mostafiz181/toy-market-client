@@ -1,0 +1,45 @@
+#shop-part{
+    width: 100%;
+    padding: 50px 10px;
+    background-color: coral;
+}
+
+#shop-part h2{
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-weight: regular;
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.748);
+    padding-bottom: 20px;
+ 
+}
+
+.btn-tab{
+    border: 0;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: rgb(38, 38, 233);
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-weight: regular;
+    font-size: 15px;
+    color: #ffff;
+    border-radius: 5px;
+}
+
+.react-tabs__tab--selected {
+    background: none !important;
+    border-color: #aaa transparent !important;
+    color: black;
+    border-radius: none !important;
+}
+
+.react-tabs__tab:focus {
+    outline: 0 !important;
+}
+
+.react-tabs__tab{
+    border: transparent !important;
+}
+
+
+
