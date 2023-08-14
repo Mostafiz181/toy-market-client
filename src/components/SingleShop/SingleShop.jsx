@@ -1,4 +1,5 @@
 import React from "react";
+import "./singleShop.css"
 
 const SingleShop = ({ s }) => {
   const { photo, category, price, rating } = s;

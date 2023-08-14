@@ -1,0 +1,41 @@
+#favourite-part{
+    width: 100%;
+    padding: 30px 0;
+    
+}
+
+#favourite-part .favourite-text{
+    text-align: center;
+}
+
+#favourite-part .favourite-text h2{
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+#favourite-part .favourite-text p{
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
